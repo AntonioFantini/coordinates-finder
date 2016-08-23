@@ -14,6 +14,7 @@ coordinatesFinder.findCoordinates("gragragag", logCity);
 
 function logCity(city){
    addSeparator("------------------coordinates for: " + city.city);
+   console.log("placeid: "+city.placeid);
    console.log("latitude: "+city.latitude);
    console.log("longitude: "+city.longitude);
    addSeparator();

@@ -30,11 +30,11 @@ module.exports= {
 						 var cityObj ={};
 						if(resp && resp.results.length >0){
 								cityObj = {
+									"placeid":resp.results[0].place_id,
 									"city": resp.results[0].address_components[0].long_name,
 									"latitude":resp.results[0].geometry.location.lat,
 									"longitude":resp.results[0].geometry.location.lng
 	       			   }
-	         
 						}else{
 							cityObj = {
 							  "city": "Invalid City",
