@@ -17,7 +17,7 @@ optionally you can add proxy to this test as first argument, e.g.
 $ npm test http://myuser:mypass@myproxy:myproxyport
 ```
 
-test.js contains an example of how to use this module
+**test.js** contains an example of how to use this module
 ```JavaScript
 
 var coordinatesFinder = require("./index.js");
