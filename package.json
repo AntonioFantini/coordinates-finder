@@ -1,0 +1,23 @@
+{
+  "name": "coordinates-finder",
+  "version": "1.0.0",
+  "description": "Simple module to find coordinates (latitude and longitude) of a given city",
+  "main": "index.js",
+  "dependencies": {
+    "https-proxy-agent": "^1.0.0",
+    "request": "^2.74.0"
+  },
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AntonioFantini/coordinates-finder.git"
+  },
+  "author": "Antonio Fantini http://antoniofantini.eu/",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AntonioFantini/coordinates-finder/issues"
+  },
+  "homepage": "https://github.com/AntonioFantini/coordinates-finder#readme"
+}
