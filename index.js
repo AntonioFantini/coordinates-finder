@@ -1,4 +1,4 @@
-var opts;
+var opts; 
 module.exports= {
 	setOpts : function(opts){
 		this.opts = opts;
