@@ -1,4 +1,4 @@
-var coordinatesFinder = require("./index.js");
+var coordinatesFinder = require("./coordinates_finder.js");
 if(process.argv.length>2){
     addSeparator();
     console.log("using proxy: "+process.argv[2]);
