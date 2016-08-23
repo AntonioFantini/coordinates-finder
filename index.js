@@ -37,6 +37,7 @@ module.exports= {
 	       			   }
 						}else{
 							cityObj = {
+								"placeid":"N.A.",
 							  "city": "Invalid City",
 								"latitude":"N.A.",
 								"longitude":"N.A."
