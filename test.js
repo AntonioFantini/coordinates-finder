@@ -8,15 +8,16 @@ if(process.argv.length>2){
             "proxy": process.argv[2]
     });
 }
-coordinatesFinder.findCoordinates("Rimini", logCity);
-coordinatesFinder.findCoordinates("London, UK",  logCity);
-coordinatesFinder.findCoordinates("gragragag", logCity);
+coordinatesFinder.findCoordinates("Rimini", logLocation);
+coordinatesFinder.findCoordinates("London, UK",  logLocation);
+coordinatesFinder.findCoordinates("gragragag", logLocation);
 
-function logCity(city){
-   addSeparator("------------------coordinates for: " + city.city);
-   console.log("placeid: "+city.placeid);
-   console.log("latitude: "+city.latitude);
-   console.log("longitude: "+city.longitude);
+function logLocation(location){
+   addSeparator("------------------coordinates for: " + location.location);
+   console.log("formatted address: "+location.formattedAddress);
+   console.log("placeid: "+location.placeId);
+   console.log("latitude: "+location.latitude);
+   console.log("longitude: "+location.longitude);
    addSeparator();
 }
 

@@ -3,7 +3,7 @@ module.exports= {
 	setOpts : function(opts){
 		this.opts = opts;
 	},
-	findCoordinates : function(city, callback){
+	findCoordinates : function(locationName, callback){
 		var HttpsProxyAgent = require('https-proxy-agent');
 	    var request = require('request');
 			var agent;
@@ -11,7 +11,7 @@ module.exports= {
 	    	agent = new HttpsProxyAgent(this.opts.proxy);
 			}
 	   request({
-	          uri: "https://maps.googleapis.com/maps/api/geocode/json?address="+city,
+	          uri: "https://maps.googleapis.com/maps/api/geocode/json?address="+locationName,
 	          method: "GET",
 	          headers: {
 	          'content-type': 'application/x-www-form-urlencoded'
@@ -27,23 +27,25 @@ module.exports= {
 						}
 	          var resp = JSON.parse(response.body);
 	          //console.log("Original resp: "+JSON.stringify(resp));
-						 var cityObj ={};
+						 var locationObj ={};
 						if(resp && resp.results.length >0){
-								cityObj = {
-									"placeid":resp.results[0].place_id,
-									"city": resp.results[0].address_components[0].long_name,
+								locationObj = {
+									"placeId":resp.results[0].place_id,
+									"location": resp.results[0].address_components[0].long_name,
 									"latitude":resp.results[0].geometry.location.lat,
-									"longitude":resp.results[0].geometry.location.lng
+									"longitude":resp.results[0].geometry.location.lng,
+									"formattedAddress": resp.results[0].formatted_address
 	       			   }
 						}else{
-							cityObj = {
-								"placeid":"N.A.",
-							  "city": "Invalid City",
+							locationObj = {
+								"placeId":"N.A.",
+							  "location": "Invalid Place",
 								"latitude":"N.A.",
-								"longitude":"N.A."
+								"longitude":"N.A.",
+								"formattedAddress":"N.A."
 							 }
 						 }
-						callback(cityObj);
+						callback(locationObj);
 						
 	      });
 	}
