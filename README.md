@@ -1,6 +1,6 @@
 # coordinates-finder
 
-####Simple Node.Js module to retrieve the latitude and the longitude of a given city from google maps api
+####Simple Node.Js module to retrieve the latitude and the longitude of a given place from google maps api
 
 Run the following command to install any missing dependency:
 
