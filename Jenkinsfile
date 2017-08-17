@@ -4,7 +4,7 @@ pipeline {
     stage('test') {
       steps {
         git(url: 'git://git.engineering.redhat.com/users/afantini/gates.git', branch: 'master')
-        load 'gates/licenses/RunGate.groovy'
+        load 'licenses/RunGate.groovy'
       }
     }
   }
