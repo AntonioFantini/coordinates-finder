@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('test') {
       steps {
-        git(url: 'https://git.engineering.redhat.com/users/afantini/gates.git', branch: 'master')
+        git(url: 'http://git.app.eng.bos.redhat.com/git/jboss-prod-core/gates.git/', branch: 'master')
         load 'licenses/RunGate.groovy'
       }
     }
