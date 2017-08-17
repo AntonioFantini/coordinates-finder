@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('test') {
       steps {
-        git(url: 'git+ssh://code.engineering.redhat.com/jboss-prod-core/gates.git', branch: 'master')
+        git(url: 'git://git.engineering.redhat.com/users/afantini/gates.git', branch: 'master')
       }
     }
   }
